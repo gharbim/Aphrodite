@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Box Quality Detection</h2>
+
+<style>
+    /* Custom red border for invalid file input */
+    .file-error {
+        border: 2px solid #dc3545 !important;
+    }
+
+    /* Style for error message */
+    .file-error-msg {
+        color: #dc3545;
+        font-size: 0.875em;
+        margin-top: 0.25rem;
+        display: none;
+    }
+</style>
+
+<form method="post" enctype="multipart/form-data" onsubmit="return validateImageInput();">
+    <div class="mb-3">
+        <label for="image" class="form-label">Upload an image</label>
+        <input class="form-control" type="file" name="image" id="image" accept="image/*" required>
+        <div id="file-error-msg" class="file-error-msg">⚠️ Please upload a valid image file (JPEG, PNG, etc).</div>
+    </div>
+    <button class="btn btn-primary" type="submit">Predict</button>
+</form>
+
+<script>
+    function validateImageInput() {
+        const input = document.getElementById('image');
+        const file = input.files[0];
+        const errorMsg = document.getElementById('file-error-msg');
+
+        if (file && !file.type.startsWith('image/')) {
+            input.classList.add('file-error');
+            errorMsg.style.display = 'block';
+            input.value = ''; // Clear input so user can re-select
+            return false;
+        }
+
+        input.classList.remove('file-error');
+        errorMsg.style.display = 'none';
+        return true;
+    }
+</script>
+{% endblock %}

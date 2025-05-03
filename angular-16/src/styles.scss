@@ -1,0 +1,189 @@
+/* ========================= */
+/* 🌸 Aphrodite Theme Style  */
+/* ========================= */
+
+:root {
+    --aphrodite-primary: #e68fa3;         /* Rose doux */
+    --aphrodite-secondary: #fce4ec;       /* Rose pâle */
+    --aphrodite-accent: #4a148c;          /* Violet profond */
+    --aphrodite-bg: #fef6f9;              /* Fond léger */
+    --aphrodite-sidebar: #fde8f0;         /* Sidebar rose pastel */
+    --aphrodite-text-dark: #4e2a2a;       /* Texte foncé */
+  }
+  
+  /* ========================= */
+  /* 🌈 Base & Body Styling */
+  /* ========================= */
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--aphrodite-bg);
+    color: var(--aphrodite-text-dark);
+  }
+  
+  /* ========================= */
+  /* 🎀 Sidebar Styling */
+  /* ========================= */
+  .left-sidebar {
+    background-color: var(--aphrodite-sidebar) !important;
+    border-right: 1px solid #f5c6d6;
+    min-height: 100vh;
+    padding-top: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 12px rgba(255, 192, 203, 0.15);
+  
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--aphrodite-accent);
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+      display: block;
+    }
+  
+    .sidebar-nav {
+      padding: 0 1rem;
+  
+      .sidebar-item {
+        margin-bottom: 0.5rem;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s;
+  
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: var(--aphrodite-text-dark);
+          font-weight: 500;
+          padding: 12px 16px;
+          border-radius: 12px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+  
+          i, .bi {
+            font-size: 1.2rem;
+          }
+  
+          &:hover {
+            background-color: var(--aphrodite-primary);
+            color: white;
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+          }
+        }
+  
+        &.active > a {
+          background-color: var(--aphrodite-primary);
+          color: #fff;
+          box-shadow: 0 6px 12px rgba(230, 143, 163, 0.2);
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+  
+  /* ========================= */
+  /* 👑 Topbar Styling */
+  /* ========================= */
+  .topbar {
+    background-color: #d04982 !important;
+    color: white;
+  }
+  
+  .navbar-header .navbar-brand {
+    background-color: var(--aphrodite-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    margin-right: 20px;
+  }
+  
+  .navbar-header .navbar-brand img {
+    height: 50px;
+  }
+  
+  /* ========================= */
+  /* ✨ Logo Text */
+  /* ========================= */
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--aphrodite-accent);
+    font-weight: bold;
+    margin-left: 8px;
+  }
+  
+  /* ========================= */
+  /* 📊 Dashboard Cards */
+  /* ========================= */
+  .card, .chart-box {
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover, .chart-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h4, .card h5 {
+    color: var(--aphrodite-text-dark);
+  }
+  
+  .chart-box {
+    background: var(--aphrodite-bg);
+    box-shadow: 0 2px 12px rgba(232, 130, 154, 0.2);
+  }
+  
+  /* ========================= */
+  /* 📎 Widgets & Feeds */
+  /* ========================= */
+  .feeds {
+    font-size: 0.95rem;
+  }
+  
+  .feeds .text-muted {
+    color: #888 !important;
+  }
+  /* Remplacer le bleu par rose doux Aphrodite */
+.btn-primary,
+.bg-primary,
+.sidebar-nav .sidebar-item.active > a,
+.sidebar-nav .sidebar-item a:hover {
+  background-color: #e68fa3 !important;
+  border-color: #e68fa3 !important;
+  color: #fff !important;
+}
+
+.card-title,
+.text-primary {
+  color: #e68fa3 !important;
+}
+/* Agrandir le logo principal */
+.logo-text img,
+.navbar-header .navbar-brand img {
+  height: 70px !important;
+  max-width: 180px !important;
+  object-fit: contain;
+}
+.bi-frame-container {
+    padding: 1rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+  
+  
+  /* ========================= */
+  /* 🔗 External Fonts */
+  /* ========================= */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap');
+
+
+  

@@ -1,0 +1,6 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>📈 Predicted Total Revenue</h2>
+<p><strong>Prediction:</strong> {{ prediction | round(2) }}</p>
+<a href="/predict" class="btn btn-secondary">Predict Another</a>
+{% endblock %}
