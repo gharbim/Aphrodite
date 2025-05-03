@@ -1,0 +1,11 @@
+<div class="card p-4">
+    <h2>💬 Sentiment Review</h2>
+  
+    <textarea [(ngModel)]="reviewText" class="form-control mb-3" rows="4" placeholder="Write a review..."></textarea>
+    <button class="btn btn-primary" (click)="analyzeReview()">Analyze</button>
+  
+    <div *ngIf="sentiment" class="alert alert-info mt-3">
+      😊 Sentiment: <strong>{{ sentiment }}</strong> (Score: {{ score | number:'1.2-2' }})
+    </div>
+  </div>
+  
